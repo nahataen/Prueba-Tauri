@@ -1,0 +1,44 @@
+name: Build Tauri v1 App
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.os == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install Tauri CLI v1
+        run: cargo install tauri-cli --version "^1"
+
+      - name: Install frontend dependencies
+        run: npm install
+
+      - name: Build Tauri app
+        run: cargo tauri build ${{ matrix.os == 'macos-latest' && '--target universal-apple-darwin' || '' }}
+        env:
+          MACOSX_DEPLOYMENT_TARGET: "10.10"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.os }}-app
+          path: src-tauri/target/release/bundle/**

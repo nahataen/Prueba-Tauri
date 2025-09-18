@@ -1,0 +1,16 @@
+{
+  "name": "prueba2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+  "dev": "live-server frontend",
+  "build": "echo 'Aquí puedes poner tu comando de build si lo tienes'"
+}
+
+,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
