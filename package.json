@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
- "scripts": {
-  "dev": "live-server frontend",
-  "build": "echo 'Aquí puedes poner tu comando de build si lo tienes'"
+"scripts": {
+  "dev": "echo 'No dev server for plain HTML'",
+  "build": "echo 'Static HTML, no build needed'"
 }
 
 ,
