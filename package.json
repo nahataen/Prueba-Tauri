@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
 "scripts": {
-  "dev": "echo 'No dev server for plain HTML'",
-  "build": "echo 'Static HTML, no build needed'"
-}
+    "dev": "live-server frontend --port=8080",
+    "build": ""
+  }
 
 ,
   "keywords": [],
