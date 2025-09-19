@@ -44,4 +44,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.os }}-app
-          path: src-tauri/target/release/bundle/**
+          path: |
+            ${{ matrix.os == 'macos-latest' && 'src-tauri/target/release/bundle/macos/**' || '' }}
+            ${{ matrix.os == 'windows-latest' && 'src-tauri/target/release/bundle/msi/**' || '' }}
