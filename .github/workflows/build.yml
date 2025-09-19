@@ -43,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.os }}-app
+          name: ${{ matrix.os }}-installer
           path: |
-            ${{ matrix.os == 'macos-latest' && 'src-tauri/target/release/bundle/macos/**' || '' }}
-            ${{ matrix.os == 'windows-latest' && 'src-tauri/target/release/bundle/msi/**' || '' }}
+            ${{ matrix.os == 'macos-latest' && 'src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg' || '' }}
+            ${{ matrix.os == 'windows-latest' && 'src-tauri/target/release/bundle/msi/*.msi' || '' }}
