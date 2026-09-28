@@ -49,8 +49,8 @@ Config clave (`tauri.conf.json`):
 Requisitos: Rust estable + Node LTS + [prerrequisitos Tauri v1](https://tauri.app/v1/guides/getting-started/prerequisites/) (en Windows: Visual Studio Build Tools + WebView2).
 
 ```bash
-git clone https://github.com/nahataen/tauri-hello-world-v1.git
-cd tauri-hello-world-v1
+git clone https://github.com/nahataen/Tauri-Practica.git
+cd Tauri-Practica
 
 # 1. Dev server del frontend (puerto 8080)
 npm install -g live-server   # solo una vez
