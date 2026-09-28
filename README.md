@@ -1,4 +1,4 @@
-# Prueba-Tauri — Lab desktop con Rust + Tauri (v1)
+# 🦀 tauri-hello-world-v1 — Lab desktop con Rust + Tauri (v1)
 
 App desktop mínima de prueba con **Tauri v1 + Rust + HTML estático**.
 Abre una ventana nativa de 800×600 que carga un `Hello, World!`. Sin comandos, sin estado, sin framework frontend.
@@ -49,8 +49,8 @@ Config clave (`tauri.conf.json`):
 Requisitos: Rust estable + Node LTS + [prerrequisitos Tauri v1](https://tauri.app/v1/guides/getting-started/prerequisites/) (en Windows: Visual Studio Build Tools + WebView2).
 
 ```bash
-git clone https://github.com/nahataen/Prueba-Tauri.git
-cd Prueba-Tauri
+git clone https://github.com/nahataen/tauri-hello-world-v1.git
+cd tauri-hello-world-v1
 
 # 1. Dev server del frontend (puerto 8080)
 npm install -g live-server   # solo una vez
